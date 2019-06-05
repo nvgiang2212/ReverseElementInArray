@@ -25,10 +25,23 @@ public class ReverseElementInArray {
             i++;
         }
 
+        // In ra mang da nhap
         System.out.printf("%-20s%s", "Element in array: ", "");
         for (int j = 0; j < array.length; j++) {
             System.out.println(array[j] + "\t");
         }
-        
+
+        // Dao nguoc thu tu cac phan tu trong mang
+        for (int j = 0; j < array.length/2; j++) {
+            int temp = array[j];
+            array[j] = array[size - 1 - j];
+            array[size - 1 - j] = temp;
+        }
+
+        // In ra mang sau khi Dao nguoc
+        System.out.printf("Reverse array: " + "\n");
+        for (int j = 0; j < array.length; j++) {
+            System.out.println(array[j] + "\t");
+        }
     }
 }
